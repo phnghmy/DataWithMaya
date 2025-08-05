@@ -1,0 +1,364 @@
+:root{
+   --text-color: #fcfcfc; 
+   --link-color: #ffffff;
+   --background-color: #000059;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 50px ;
+    height: 80px
+}
+
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a{
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+/* Section 1*/
+.About {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+.About .text{
+    flex: 5;
+    color: #fcfcfc;
+}
+
+.About .text h2 {
+    font-size: 45px;
+}
+
+.About .text .link{
+    margin-top: 25px;
+    color: #fcfcfc;
+}
+
+.About .text .link a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+.About .text .link a :hover{
+    color:black;
+}
+
+.About .headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.About .headshot img{
+    width: 400px;
+    border-radius: 20%;
+
+}
+
+
+/* Section 2: Skills*/
+.skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2{
+    text-align: center;
+    font-size: 35px;
+    color: #fcfcfc;
+}
+
+.skills-section .text{
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.skills-section .text2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #6c63ff;;
+    margin-top: 30px;
+}
+
+/* Section 3: Experience*/
+.experiences-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.experiences-section h2{
+    text-align: center;
+    font-size: 35px;
+    color: #fcfcfc;
+}
+
+.experience-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    color: #fff;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid #6c63ff;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.experience-item h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.experience-item .date {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Section 4: Sample Work*/
+
+.sample-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.sample-section h2 {
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6c63ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width:850px){
+    .About .text h2{
+        font-size: 35px;
+    }
+}
+
+
+.contact-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-section .group {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-section .text p {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section label {
+    font-size: 16px;
+    color: #fff;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.contact-section button {
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #6c63ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #5548c8;
+}
+
+
+
+
+@media (max-width:600px){
+    /* NAVBAR */
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a{
+        font-size: 22px;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    .About {
+        padding: 0 20px;
+    }
+
+    .About .text h2{
+        font-size: 30px;
+    }
+
+}
+
+
+
+/* Section 4: Contact 
+.contact-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2{
+    text-align: center;
+    font-size: 35px;
+    color: #fcfcfc;
+    margin-bottom: 20px;
+}
+
+.contact-section .group{
+    max-width: 600px;
+    display: flex;
+    gap:50px;
+    font-size: 35px;
+    color: #fcfcfc;
+}
+
+.contact-section .group.text{
+    flex: 3;
+    margin-top: 20px;
+    font-size: 35px;
+    color: #fcfcfc;
+}
+
+.contact-section .group.form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea{
+    font-family: 'Poppins', san-serif;
+    border: 2px solid color(white);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button{
+    font-size: 16px;
+    font-family: 'Poppins', san-serif;
+    color: #fcfcfc;
+    background-color: var(--text-color);
+    border: none;
+    height: 50px;
+
+}
+*/
